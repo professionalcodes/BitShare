@@ -6,6 +6,12 @@ var controllers = bitShareApp.controllers = angular.module('bitShareAppControlle
 controllers.controller('RootCtrl', ["$scope", "$location", function ($scope, $location) {
 
     $scope.onload = function() {
-	log("Root Controller laoded");
+		log("Root Controller laoded");
     }
+
+    $scope.onload();
+}]);
+
+controllers.controller('Header1Ctrl', ['$scope', function ($scope) {
+	
 }]);
