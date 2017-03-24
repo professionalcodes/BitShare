@@ -49,9 +49,25 @@ class Header1(MainHandler):
     def get(self):
         self.render("header1.html")
 
+class Navbar1(MainHandler):
+    def get(self):
+        self.render("navbar1.html")
+
+class Body1(MainHandler):
+    def get(self):
+        self.render("body1.html")
+
+class Footer1(MainHandler):
+    def get(self):
+        self.render("footer1.html")
+
+
 
 app = webapp2.WSGIApplication([
     ('/', HomePage),
     ('/header1', Header1),
+    ('/navbar', Navbar1),
+    ('/body1', Body1),
+    ('/footer1', Footer1)
 
 ], debug=True)

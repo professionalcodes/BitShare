@@ -15,3 +15,15 @@ controllers.controller('RootCtrl', ["$scope", "$location", function ($scope, $lo
 controllers.controller('Header1Ctrl', ['$scope', function ($scope) {
 	
 }]);
+
+controllers.controller('Navbar1Ctrl', ['$scope', function ($scope) {
+	
+}])
+
+controllers.controller('Body1Ctrl', ['$scope', function ($scope) {
+	
+}])
+
+controllers.controller('Footer1Ctrl', ['$scope', function ($scope) {
+	
+}]);

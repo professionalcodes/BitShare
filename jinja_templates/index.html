@@ -29,11 +29,24 @@
 
 <body ng-app="bitShareApp" ng-controller="RootCtrl">
 
-    <div ng-controller="Header1Ctrl">
-        <ng-include src="'/header1'" scope="" onload=""></ng-include>
-    </div>
-    
-<body
+
+            <div ng-controller="Header1Ctrl">
+                <ng-include src="'/header1'" scope="" onload=""></ng-include>
+            </div>
+
+            <div ng-controller="Body1Ctrl">
+                <ng-include src="'/body1'" scope="" onload=""></ng-include>
+            </div>
+
+            <div ng-controller="Footer1Ctrl">
+                <ng-include src="'/footer1'" scope="" onload=""></ng-include>
+            </div>
+        
+
+    <!-- <div ng-controller="Navbar1Ctrl">
+        <ng-include src="'/navbar1'" scope="" onload=""></ng-include>
+    </div> -->
+
 </body>
 </html>
 
