@@ -1,29 +1,22 @@
 'use strict';
 
-var bitShareApp = bitShareApp || {};
-var controllers = bitShareApp.controllers = angular.module('bitShareAppControllers', []);
+var profileApp = profileApp || {};
+var controllers = profileApp.controllers = angular.module('profileAppControllers', []);
 
-controllers.controller('RootCtrl', ["$scope", "$location", function ($scope, $location) {
+/* RootCtrl handles all signin options */
+controllers.controller('RootCtrl', ["$scope", function ($scope) {
 
-    $scope.onload = function() {
-		log("Root Controller laoded");
-    }
+	$scope.rootCtrlOnload = function() {
+		log("root controller loaded");
+	};
 
-    $scope.onload();
 }]);
 
-controllers.controller('Header1Ctrl', ['$scope', function ($scope) {
-	
+controllers.controller('HeaderCtrl', ["$scope", function($scope){
+
+	$scope.headerCtrlOnload = function() {
+		log("header controller loaded");
+	};
+
 }]);
-
-controllers.controller('Navbar1Ctrl', ['$scope', function ($scope) {
 	
-}])
-
-controllers.controller('Body1Ctrl', ['$scope', function ($scope) {
-	
-}])
-
-controllers.controller('Footer1Ctrl', ['$scope', function ($scope) {
-	
-}]);

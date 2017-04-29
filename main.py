@@ -22,14 +22,13 @@ import string
 import json
 import logging
 import random
+
 from google.appengine.ext import ndb
-import sys
 
 template_dir = os.path.join(os.path.dirname(__file__), 'jinja_templates')
-jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir), autoescape = True)
+jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), autoescape=True)
 
 class MainHandler(webapp2.RequestHandler):
-
     def write(self, *args, **kwargs):
         self.response.out.write(*args, **kwargs)
 
@@ -40,34 +39,24 @@ class MainHandler(webapp2.RequestHandler):
     def render(self, template, **kwargs):
         self.write(self.render_str(template, **kwargs))
 
-class HomePage(MainHandler):
-    def get(self, **params):
-        logging.info(params)
+
+class Homepage(MainHandler):
+    def get(self):
         self.render("index.html")
 
-class Header1(MainHandler):
-    def get(self):
-        self.render("header1.html")
+    def post(self):
+        pass
 
-class Navbar1(MainHandler):
-    def get(self):
-        self.render("navbar1.html")
+class Header(MainHandler):
+	def get(self):
+		self.render("header.html")
 
-class Body1(MainHandler):
+class Pallet(MainHandler):
     def get(self):
-        self.render("body1.html")
-
-class Footer1(MainHandler):
-    def get(self):
-        self.render("footer1.html")
-
+        self.render("pallet.html")
 
 
 app = webapp2.WSGIApplication([
-    ('/', HomePage),
-    ('/header1', Header1),
-    ('/navbar', Navbar1),
-    ('/body1', Body1),
-    ('/footer1', Footer1)
-
+    ('/', Homepage),
+	('/header', Header),
 ], debug=True)

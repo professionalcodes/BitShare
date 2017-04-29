@@ -1,14 +1,12 @@
-'use strict';
+var profileApp = angular.module("profileApp", ["profileAppControllers", "ngRoute"]);
 
-var app = angular.module('bitShareApp', ['bitShareAppControllers', 'ngRoute']);
-
+/* routing configuration for production */
 var routeConfig = function($routeProvider) {
-
-  $routeProvider
-  .otherwise({
-    redirectTo: "/"
-  });
-}
+    $routeProvider.otherwise({
+        redirectTo: '/'
+    });
+};
 
 routeConfig.$inject = ["$routeProvider"];
-app.config(routeConfig);
+profileApp.config(routeConfig);
+

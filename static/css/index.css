@@ -1,25 +1,18 @@
-html, body {
-    width: 100%;
-    height: 100;
-    margin: 0;
+body, html {
+	width: 100%;
+	height: 100%;
 }
 
-.fa-2x.fa-bitcoin-symbol {
-    font-size: 3em;
-    color: red;
+#header-container {
+	background: midnightblue;
 }
 
-.canvas {
-    background-color: cornflowerblue;
-    width: 50%;
+#header-container a {
+	color: powderblue;
 }
-t
-/* Aside from setting margin to 0 as part of the sticky footer, the styles below are for the sticky footer */
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  background-color: black;
+
+#header-container li.active a {
+	color: none;
+	background-color: none;
 }
