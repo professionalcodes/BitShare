@@ -17,6 +17,15 @@ controllers.controller('HeaderCtrl', ["$scope", function($scope){
 	$scope.headerCtrlOnload = function() {
 		log("header controller loaded");
 	};
-
 }]);
+
+controllers.controller('PalletCtrl', ["$scope", function($scope){
+
+	$scope.palletCtrlOnload = function() {
+		log("pallet controller loaded");
+	};
+}]);
+
+
+
 	

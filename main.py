@@ -59,4 +59,5 @@ class Pallet(MainHandler):
 app = webapp2.WSGIApplication([
     ('/', Homepage),
 	('/header', Header),
+    ('/pallet', Pallet),
 ], debug=True)

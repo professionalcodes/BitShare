@@ -25,7 +25,11 @@
 
 	<body ng-app="profileApp" ng-controller="RootCtrl">
 		<div ng-controller="HeaderCtrl">
-			<div ng-include="'/header'"></div>
+			<div ng-include="'/header'" onload="headerCtrlOnload()"></div>
+		</div>
+
+		<div ng-controller="PalletCtrl">
+			<div ng-include="'/pallet'" onload="palletCtrlOnload()"></div>
 		</div>
 	</body>
 </html>
