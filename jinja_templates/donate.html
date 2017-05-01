@@ -1,0 +1,25 @@
+<div id="donate-container" class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 text-center">
+            <h1>Thanks for your contribution!</h1>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-xs-12">
+            <form action="/charge" id="payment-form">
+              <div class="form-row">
+                <label for="card-element">
+                  Credit or debit card
+                </label>
+                <div id="card-element">
+                  <!-- a Stripe Element will be inserted here. -->
+                </div>
+
+                <!-- Used to display form errors -->
+                <div id="card-errors"></div>
+              </div>
+              <button class="btn btn-primary" id="btn-submit-payment">Submit Payment</button>
+            </form>
+        </div>
+    </div>
+</div>

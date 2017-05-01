@@ -55,9 +55,32 @@ class Pallet(MainHandler):
     def get(self):
         self.render("pallet.html")
 
+class Home(MainHandler):
+    def get(self):
+        self.render("home.html")
+
+    def post(self):
+        pass
+
+
+class About(MainHandler):
+    def get(self):
+        self.render("about.html")
+
+class Contact(MainHandler):
+    def get(self):
+        self.render("contact.html")
+
+class Donate(MainHandler):
+    def get(self):
+        self.render("donate.html")
 
 app = webapp2.WSGIApplication([
     ('/', Homepage),
 	('/header', Header),
     ('/pallet', Pallet),
+    ('/home', Home),
+    ('/about', About),
+    ('/contact', Contact),
+    ('/donate', Donate),
 ], debug=True)
