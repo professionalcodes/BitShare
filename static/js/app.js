@@ -19,7 +19,7 @@ var routeConfig = function($routeProvider) {
         controller: "ContactCtrl"
     });
     $routeProvider.otherwise({
-        redirectTo: '/'
+        redirectTo: '/home'
     });
 };
 
@@ -62,5 +62,4 @@ profileApp.factory('stripeService', function () {
   return service;
 
 });
-
 
